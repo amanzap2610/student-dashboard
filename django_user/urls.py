@@ -31,6 +31,8 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(redirect_authenticated_user=True, template_name='commons/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='home'), name='logout'),
     path('oauth/', include('social_django.urls', namespace='social')),  # <-- here
+    path('home1/', TemplateView.as_view(template_name='home1.html'), name='home1'), 
+    path('dashboard/', TemplateView.as_view(template_name='dashboard.html'), name='dashboard'), 
 
 
     # Main Page 

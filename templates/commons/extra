@@ -1,18 +1,2 @@
-{% extends 'base.html' %}
-
-{% block title %}Login Page{% endblock title %}
-
-{% block content %} 
-    <h2>Login</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Login</button>
-        <br><br>
-        <a href="{% url 'password_reset' %}">Forgot Password</a>
-        <br><br>
-        <a href="{% url 'signup' %}">Sign Up</a>
-        <br><br>
-        <a href="{% url 'home' %}">Home</a>
-    </form>
-{% endblock content %}
+path('home1/', TemplateView.as_view(template_name='home1.html'), name='home1'), 
+    path('dashboard/', TemplateView.as_view(template_name='dashboard.html'), name='dashboard'), 
