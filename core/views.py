@@ -6,7 +6,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView
 
-
 # Sign Up View
 class SignUpView(CreateView):
     form_class = SignUpForm
